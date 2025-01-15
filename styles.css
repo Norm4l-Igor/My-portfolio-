@@ -10,11 +10,13 @@ body {
 
 header {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: white;
     /* border-bottom: 1px solid #ddd; */
+    min-width: 100%;
 }
 
 .profile {
@@ -37,7 +39,7 @@ header {
     position: relative;
     transition: transform 0.3s ease, background-color 0.3s ease;
     background-color: transparent;
-    padding: 5px 10px;
+    padding: 9px 10px;
     border-radius: 5px;
     /* transform: rotate(5deg); */
 }
@@ -72,7 +74,7 @@ header {
 
 .menu a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     color: #000;
     position: relative;
     transition: color 0.3s ease;
@@ -96,4 +98,76 @@ header {
 
 .menu a:hover {
     color: #e74c3c;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(99vh - 70px); 
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 80px;
+    border-radius: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-left: auto; 
+    margin-right: auto
+}
+
+/* Tooltip */
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(-50%, 0); 
+    }
+    50% {
+        transform: translate(-50%, -10px); 
+    }
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Main Title */
+h1 {
+    font-size: 56px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 26px;
+    color: #666;
+    margin-top: 10px;
+    max-width: 600px;
 }
