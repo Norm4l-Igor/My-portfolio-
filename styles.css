@@ -21,15 +21,67 @@ header {
 
 .profile {
     display: flex;
+    position: relative;
     align-items: center;
     gap: 50px; 
 }
 
-.profile img {
+
+.toggle-image {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.toggle-image:hover {
+    transform: scale(1.1); /* Zoom ao passar o mouse */
+}
+
+
+
+.dropdown {
+    display: none; /* Oculto por padrão */
+    position: absolute; ;
+    top: 100%; /* Aparece logo abaixo da foto */
+    left: 90%; /* Centralizado em relação à foto */
+    transform: translateX(-40%);
+    background-color: white;
+    border: 8px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    text-align: left;
+    width: 150px; /* Largura fixa para o drop box */
+}
+
+/* Links dentro do Drop Box */
+.dropdown a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar o Drop Box ao clicar */
+.image-with-dropdown:focus-within .dropdown {
+    display: block;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .email {
@@ -41,7 +93,7 @@ header {
     background-color: transparent;
     padding: 9px 10px;
     border-radius: 5px;
-    /* transform: rotate(5deg); */
+    left: -300px;
 }
 
 .email a{
@@ -66,6 +118,8 @@ header {
 .email:hover span {
     color: #fff;
 }
+
+
 
 .menu {
     display: flex;
@@ -116,6 +170,17 @@ main {
     margin-right: auto
 }
 
+.new-image {
+    position: fixed;
+    top: 30px;
+    left: 75px;
+    width: 60px; 
+    height: auto;
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+
 /* Tooltip */
 .tooltip-container {
     position: relative;
@@ -124,7 +189,7 @@ main {
 .tooltip {
     position: absolute;
     top: -40px;
-    left: 50%;
+    left: 46%;
     transform: translateX(-50%);
     background-color: #333;
     color: #fff;
@@ -135,6 +200,7 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
     animation: float 2s ease-in-out infinite;
+    margin-bottom: 60px; 
 }
 
 @keyframes float {
@@ -162,7 +228,8 @@ h1 {
     font-size: 56px;
     font-weight: bold;
     color: #333;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 p {
@@ -171,3 +238,109 @@ p {
     margin-top: 10px;
     max-width: 600px;
 }
+
+
+
+.about-me {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 10px; 
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+}
+
+.about-me h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px; 
+}
+
+.about-me p {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+
+.about-me {
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    /* max-width: 1200px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-me h2 {
+    font-size: 56px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-me .intro {
+    font-size: 25px;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.about-me .content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.about-me .left,
+.about-me .right {
+    flex: 1;
+    text-align: left;
+}
+
+.about-me h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+   margin-left: 50px;
+}
+
+.about-me p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 40px;
+}
+
+.skills span {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skills span:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+

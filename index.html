@@ -8,21 +8,34 @@
 </head>
 <body>
     <header>
-        <div class="profile">
-            <img src="./image/mynhha foto.jpg" alt="Minha Foto">
+        <div class="profile image-with-dropdown">
+            <img src="./image/mynhha foto.jpg" alt="Minha Foto" class="toggle-image" tabindex="0">
+            <div class="dropdown">
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </div>
             <div class="email">
               <a href="mailto:igorvguedesoliveira@gmail.com">
                  <span>igorvguedesoliveira@gmail.com</span></a> 
             </div>
-        </div>
+            </div>
         <nav class="menu">
             <a href="#home" class="">Home</a>
+            <a href="#about">About</a>
             <a href="#experiences">Experiences</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
+        <section>
+        <div class="main-content">
+            <img src="./image/clique aqui.png" alt="Clique Aqui" class="new-image">
+            </div>
+
         <div class="tooltip-container">
             <!-- Tooltip -->
             <div class="tooltip">
@@ -35,6 +48,36 @@
                 A student aspiring to become an incredible developer, committed to learning and creating new things.
             </p>
         </div>
+
     </main>
+</section>
+<section class="about-me">
+    <h2>About Me</h2>
+    <p class="intro">Here is where you will find a little more about me.</p>
+    <div class="content">
+        <div class="left">
+            <h3>Get to know me!</h3>
+            <p>
+                I am a Frontend student with a focus on entering the technology field. I am currently studying in Canada.
+            </p>
+            <p>
+                I also love learning and taking on challenges. Whatever you have for me, I will dive in headfirst. I am 19 years old and learn things quickly.
+            </p>
+            <p>
+                I know I don't have much experience, but I am always open to any opportunities that come my way.
+            </p>
+        </div>
+        <div class="right">
+            <h3>My Skills</h3>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>PHP</span>
+                <span>GitHub</span>
+                <span>Responsive Design</span>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
