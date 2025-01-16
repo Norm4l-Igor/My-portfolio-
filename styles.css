@@ -581,10 +581,10 @@ p {
     position: absolute;
     top: 15px;
     right: 20px;
-    background-color: #000; /* Fundo preto */
-    color: #fff; /* Cor do ícone */
+    background-color: #000; /
+    color: #fff; 
     border: none;
-    border-radius: 50%; /* Torna o botão redondo */
+    border-radius: 50%; 
     width: 50px;
     height: 50px;
     font-size: 28px;
@@ -598,7 +598,7 @@ p {
 
 @media (max-width: 1342px) {
     .email {
-        display: none; /* Esconde o email em telas menores */
+        display: none; 
     }
 }
 
